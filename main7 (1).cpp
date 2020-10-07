@@ -1,9 +1,11 @@
 #include <iostream>
 #include <math.h>
 #include <vector>
+#include <locale>
 
-int main() {
-    setlocale(0, "RUS");
+int main()
+{
+    setlocale(0, " ");
     std::vector<double> values;//создаем вектор, генерим туда рандомные числа
     std::vector<double> results;
     double summ = 0;
@@ -21,12 +23,12 @@ int main() {
         if (fabs(element) > 1)
             results.push_back(element);
 
-    std::cout << "Исходная последовательность:" << std::endl; //печатаем сначала те которые были  сгенерены рандомно
+    std::cout << "Ishodnay posledovatelnost:" << std::endl; //печатаем сначала те которые были  сгенерены рандомно
     for (int i = 0; i < values.size(); i++)
         std::cout << values[i] << " | ";
     std::cout << std::endl;
 
-    std::cout << "Задание #1:" << std::endl; //печатаем а теперь те что в нужной последовательности
+    std::cout << "Zadanie #1:" << std::endl; //печатаем а теперь те что в нужной последовательности
     for (int i = 0; i < results.size(); i++)
         std::cout << results[i] << " | ";
 
@@ -40,7 +42,7 @@ int main() {
     {
         summ += *iter;
     }
-    std::cout << "\nПоследнее положительное: " << *lastPos << std::endl;
-    std::cout << "\nЗадание #2(Используется исходная последовательность). Сумма: " << summ << std::endl;
+    std::cout << "\nPoslednee polozhitelnoe: " << *lastPos << std::endl;
+    std::cout << "\nZadanie #2(Ispolzuetsy ishodnay posledovatelnost). Summa: " << summ << std::endl;
     return 0;
 }
